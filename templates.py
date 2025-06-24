@@ -1,0 +1,25 @@
+
+account_template = [
+    "AMRSPI/Template - Closed Accounts",
+    "AMRSPI/Template - EQ+CA,FI/Family Account/DD",
+    "AMRSPI/Template - EQ+CA,FI/Family Account/NotDD",
+    "AMRSPI/Template - EQ+CA,FI/Single Account/DD",
+    "AMRSPI/Template - EQ+CA,FI/Single Account/NotDD",
+    "AMRSPI/Template - EQ+FI+CA/Family Account/DD",
+    "AMRSPI/Template - EQ+FI+CA/Family Account/DD/Arrears",
+    "AMRSPI/Template - EQ+FI+CA/Family Account/NotDD",
+    "AMRSPI/Template - EQ+FI+CA/Family Account/NotDD/Arrears",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/DD",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/DD/Arrears",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR-LADDERED",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/UnitedCap",
+    "AMRSPI/Template - FI+CA,EQ/Family Account/DD",
+    "AMRSPI/Template - FI+CA,EQ/Family Account/NotDD",
+    "AMRSPI/Template - FI+CA,EQ/Single Account/DD",
+    "AMRSPI/Template - FI+CA,EQ/Single Account/NotDD",
+    "AMRSPI/Template - Junkyard",
+    "AMRSPI/Template - Managed Hold Accounts",
+    "AMRSPI/Template - Non Reconciled Accounts"
+]
