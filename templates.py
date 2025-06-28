@@ -57,7 +57,7 @@ def previous_template(account_id, name, start_date, template):
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
     Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
+    ShortName={name}, StartDate={start_date}, PortfolioBillingRecord={template}>
 </Account>
 </RevportBody>
 <RevportTrailer DataType=Account RecordCount=1/>
