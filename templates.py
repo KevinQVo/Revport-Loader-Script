@@ -1,4 +1,3 @@
-
 from datetime import date
 
 account_template = [
@@ -26,62 +25,78 @@ account_template = [
     "AMRSPI/Template - Non Reconciled Accounts"
 ]
 
-# XML utility functions
-def _header():
-    today = date.today().strftime("%m/%d/%Y")
-    return f"""<?xml version="1.0" encoding="UTF-8"?>
+def non_managed_hold(account_id, name, start_date):
+    file_date = date.today().strftime("%m/%d/%Y")
+    return f"""<?xml version=1.0 encoding=UTF-8?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate="False"
-        DeleteContactByOmission="False" FileDate="{today}"
-        UpdateCommission="True" UpdateContactByType="True"/>
-    <RevportBody DataType="Account">"""
-
-def _footer():
-    return """</RevportBody>
-<RevportTrailer DataType="Account" RecordCount="1"/>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate={file_date}
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate={start_date}
+    Name={name}
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+</Account>
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
 </Bonaire>"""
 
-# XML for Non-Managed Hold
-def non_managed_hold(account_id, name, start_date):
-    return f"""{_header()}
-<Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
-    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate="{start_date}" 
-    Name= {name}
-    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="AMRSPI/Template - Managed Hold Accounts">
-</Account>
-{_footer()}"""
-
-# XML for reapplying previous template
 def previous_template(account_id, name, start_date, template):
-    return f"""{_header()}
-<Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
-    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate="{start_date}" Name="{name}"
-    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
+    file_date = date.today().strftime("%m/%d/%Y")
+    return f"""<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate={file_date}
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate={start_date}
+    Name={name}
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
 </Account>
-{_footer()}"""
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>"""
 
-# XML with updated end date
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
-    return f"""{_header()}
-<Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
-    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate="{start_date}" EndDate="{end_date}"
-    Name="{name}" ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
+    file_date = date.today().strftime("%m/%d/%Y")
+    return f"""<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate={file_date}
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate={start_date} EndDate={end_date}
+    Name={name}
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
 </Account>
-{_footer()}"""
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>"""
 
-# XML with blanked out end date
 def previous_template_blank_end(account_id, name, start_date, template):
-    return f"""{_header()}
-<Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
-    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate="{start_date}" EndDate=""
-    Name="{name}" ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
+    file_date = date.today().strftime("%m/%d/%Y")
+    return f"""<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate={file_date}
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate={start_date} EndDate=
+    Name={name}
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
 </Account>
-{_footer()}"""
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>"""
