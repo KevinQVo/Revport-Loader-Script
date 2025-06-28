@@ -13,7 +13,7 @@ if selection == "Put Account on Non-Managed Hold":
   account_id = st.text_input("Client Account Id")
   name = st.text_input("Account Name")
   start_date = st.date_input("Start Date")
-  if st.button("Generate XML button")
+  if st.button("Generate XML button"):
     xml = generate_xml.hold_tempalate(account_id, name, start_date)
     st.code(xml, language="xml")
 
@@ -24,7 +24,7 @@ elif selection == "Put Account back on Previous Template":
   start_date = st.date_input("Start Date")
   template = st.selectbox("Choose Template", generate_xml.template_list)
 
-  if st.button("Generate XML button")
+  if st.button("Generate XML button"):
     xml = generate_xml.hold_tempalate(account_id, name, start_date, template)
     st.code(xml, language="xml")
 
@@ -36,7 +36,7 @@ elif selection == "Put Account back on Previous Template w/ updated EndDate":
   end_date = st.date_input("End Date")
   template = st.selectbox("Choose Template", generate_xml.template_list)
    
-  if st.button("Generate XML button")
+  if st.button("Generate XML button"):
     xml = generate_xml.hold_tempalate(account_id, name, start_date, end_date,  template)
     st.code(xml, language="xml")
     
@@ -46,7 +46,7 @@ elif selection == "Put Account back on Previous Template w/ blanked out EndDate"
   start_date = st.date_input("Start Date")
   template = st.selectbox("Choose Template", generate_xml.template_list)
    
-  if st.button("Generate XML button")
+  if st.button("Generate XML button"):
     xml = generate_xml.hold_tempalate(account_id, name, start_date,  template)
     st.code(xml, language="xml")
 
