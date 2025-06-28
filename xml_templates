@@ -10,8 +10,8 @@
     BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxxxx
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate=10/31/2024
-    Name=BCK INVESTMENT FUND, LLC
-    ShortName=BCK INVESTMENT FUND, LLC StartDate=10/31/2024 PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+    Name= xxxxxxx
+    ShortName= xxxxxxxxx StartDate=10/31/2024 PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
 </Account>
 </RevportBody>
 <RevportTrailer DataType=Account RecordCount=1/>
