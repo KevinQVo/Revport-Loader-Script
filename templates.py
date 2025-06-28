@@ -100,4 +100,3 @@ def previous_template_blank_end(account_id, name, start_date, template):
 <RevportTrailer DataType=Account RecordCount=1/>
 </Bonaire>"""
 
-st.markdown(Author: Kevin Vo)
