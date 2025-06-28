@@ -38,7 +38,7 @@ def non_managed_hold(account_id, name, start_date):
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
     Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+    ShortName={name}, StartDate={start_date}, PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
 </Account>
 </RevportBody>
 <RevportTrailer DataType=Account RecordCount=1/>
