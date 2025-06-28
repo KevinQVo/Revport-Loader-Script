@@ -25,12 +25,14 @@ account_template = [
     "AMRSPI/Template - Non Reconciled Accounts"
 ]
 
+def _file_date():
+    return date.today().strftime("%m/%d/%Y")
+
 def non_managed_hold(account_id, name, start_date):
-    file_date = date.today().strftime("%m/%d/%Y")
     return f"""<?xml version=1.0 encoding=UTF-8?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate={file_date}
+        DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -38,18 +40,17 @@ def non_managed_hold(account_id, name, start_date):
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
     Name={name}
-    ShortName={name}, StartDate={start_date}, PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
 </Account>
 </RevportBody>
 <RevportTrailer DataType=Account RecordCount=1/>
 </Bonaire>"""
 
 def previous_template(account_id, name, start_date, template):
-    file_date = date.today().strftime("%m/%d/%Y")
     return f"""<?xml version=1.0 encoding=UTF-8?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate={file_date}
+        DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -57,18 +58,17 @@ def previous_template(account_id, name, start_date, template):
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
     Name={name}
-    ShortName={name}, StartDate={start_date}, PortfolioBillingRecord={template}>
+    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
 </Account>
 </RevportBody>
 <RevportTrailer DataType=Account RecordCount=1/>
 </Bonaire>"""
 
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
-    file_date = date.today().strftime("%m/%d/%Y")
     return f"""<?xml version=1.0 encoding=UTF-8?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate={file_date}
+        DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -83,11 +83,10 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 </Bonaire>"""
 
 def previous_template_blank_end(account_id, name, start_date, template):
-    file_date = date.today().strftime("%m/%d/%Y")
     return f"""<?xml version=1.0 encoding=UTF-8?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate={file_date}
+        DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
