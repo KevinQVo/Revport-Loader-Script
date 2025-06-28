@@ -90,3 +90,5 @@ elif selection == "Put Account Back on Previous Template w/ blanked out EndDate"
             file_name=f"{account_id}_blanked_enddate.xml",
             mime="application/xml"
         )
+
+st.markdown("Author: Kevin Vo")
