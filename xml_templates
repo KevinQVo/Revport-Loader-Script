@@ -1,0 +1,78 @@
+=<?xml version=1.0 encoding=UTF-8?>ANDCHAR(10)AND
+<Bonaire>ANDCHAR(10)AND
+    <RevportHeader CheckMInRequiredForUpdate=FalseANDCHAR(10)AND
+        DeleteContactByOmission=False FileDate=ANDIF(MONTH(TODAY())<10,0ANDMONTH(TODAY()),MONTH(TODAY()))AND/ANDDAY(TODAY())AND/ANDYEAR(TODAY())ANDANDCHAR(10)AND
+        UpdateCommission=True UpdateContactByType=True/>ANDCHAR(10)AND
+    <RevportBody DataType=Account>
+=<?xml version=1.0 encoding=UTF-8?>ANDCHAR(10)AND
+<Bonaire>ANDCHAR(10)AND
+    <RevportHeader CheckMInRequiredForUpdate=FalseANDCHAR(10)AND
+        DeleteContactByOmission=False FileDate=ANDIF(MONTH(TODAY())<10,0ANDMONTH(TODAY()),MONTH(TODAY()))AND/ANDDAY(TODAY())AND/ANDYEAR(TODAY())ANDANDCHAR(10)ANDL607
+        UpdateCommission=True UpdateContactByType=True/>ANDCHAR(10)AND
+    <RevportBody DataType=Account>
+=</RevportBody>ANDCHAR(10)AND
+<RevportTrailer DataType=Account RecordCount=ANDJ608AND/>ANDCHAR(10)AND
+</Bonaire>
+
+-------------------------------------------------
+<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate=06/24/2025
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxx
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate=05/31/2022
+    Name=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT
+    ShortName=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT StartDate=05/31/2022 PortfolioBillingRecord=AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR>
+</Account>
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>
+
+-----------------------------------------------
+<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate=06/24/2025
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxx
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate=07/18/2011 EndDate=01/07/2025
+    Name=GERALD FERNANDEZ TTEE U/A DTD 09/03/1993 GERALD FERNANDEZ REV TRUST
+    ShortName=GERALD FERNANDEZ TTEE  StartDate=07/18/2011 PortfolioBillingRecord=AMRSPI/Template - EQ+FI+CA/Single Account/DD>
+</Account>
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>
+
+-----------------------------------------------------
+<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate=06/24/2025
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxx
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT
+    Name=AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR
+    ShortName=45818 StartDate=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT PortfolioBillingRecord=>
+</Account>
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>#
+
+
+    
+
+
+    
+
+
+
