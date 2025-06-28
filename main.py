@@ -22,7 +22,7 @@ if selection == "Put Account on Non-Managed Hold":
 
     if st.button("Generate XML"):
         xml = non_managed_hold(account_id, name, start_date.strftime("%m/%d/%Y"))
-        st.code(xml, language="xml")
+        st.code(xml, language=None)
 
         st.download_button(
             label="Download XML",
@@ -40,7 +40,7 @@ elif selection == "Put the Account back on Previous Template":
 
     if st.button("Generate XML"):
         xml = previous_template(account_id, name, start_date.strftime("%m/%d/%Y"), template)
-        st.code(xml, language="xml")
+        st.code(xml, language=None)
 
         st.download_button(
             label="Download XML",
@@ -64,7 +64,7 @@ elif selection == "Put the Account Back On Previous Template w/ updated EndDate"
             end_date.strftime("%m/%d/%Y"),
             template
         )
-        st.code(xml, language="xml")
+        st.code(xml, language=None)
 
         st.download_button(
             label="Download XML",
@@ -82,7 +82,7 @@ elif selection == "Put Account Back on Previous Template w/ blanked out EndDate"
 
     if st.button("Generate XML"):
         xml = previous_template_blank_end(account_id, name, start_date.strftime("%m/%d/%Y"), template)
-        st.code(xml, language="xml")
+        st.code(xml, language=None)
 
         st.download_button(
             label="Download XML",
