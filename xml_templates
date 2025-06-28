@@ -1,78 +1,80 @@
+
+# Formula for Generating Loader to put Account on Non-Managed Hold
+<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate=06/28/2025
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+<Account AccountType=Client Account BusinessUnit=PI
+    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxxxx
+    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    InceptionDate=10/31/2024
+    Name=BCK INVESTMENT FUND, LLC
+    ShortName=BCK INVESTMENT FUND, LLC StartDate=10/31/2024 PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+</Account>
+</RevportBody>
+<RevportTrailer DataType=Account RecordCount=1/>
+</Bonaire>
+
+--------------------------------------------------------------------------------------------------------------------------------
+#Formula for Generating Loader to put Account on Non-Managed Hold
 =<?xml version=1.0 encoding=UTF-8?>ANDCHAR(10)AND
 <Bonaire>ANDCHAR(10)AND
     <RevportHeader CheckMInRequiredForUpdate=FalseANDCHAR(10)AND
         DeleteContactByOmission=False FileDate=ANDIF(MONTH(TODAY())<10,0ANDMONTH(TODAY()),MONTH(TODAY()))AND/ANDDAY(TODAY())AND/ANDYEAR(TODAY())ANDANDCHAR(10)AND
         UpdateCommission=True UpdateContactByType=True/>ANDCHAR(10)AND
     <RevportBody DataType=Account>
+=<Account AccountType=Client Account BusinessUnit=PIANDCHAR(10)AND
+    BusinessWorkGroup=AMRSPI ClientAccountId=ANDB8ANDANDCHAR(10)AND
+    ClientFirmId=Template - AMRSPI ISOCurrency=USDANDCHAR(10)AND
+    InceptionDate=ANDTEXT(C8,MM/DD/YYYY)ANDANDCHAR(10)AND
+    Name=ANDE8ANDANDCHAR(10)AND
+    ShortName=ANDF8AND StartDate=ANDTEXT(D8,MM/DD/YYYY)AND PortfolioBillingRecord=ANDG8AND>ANDCHAR(10)AND
+</Account>
+=</RevportBody>ANDCHAR(10)AND
+<RevportTrailer DataType=Account RecordCount=ANDJ9AND/>ANDCHAR(10)AND
+</Bonaire>
+
+--------------------------------------------------------------------------------------------------------------------------------
+# Formula for Generating Loader to put Account Back on Previous Template w/ updated EndDate
+<?xml version=1.0 encoding=UTF-8?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate=False
+        DeleteContactByOmission=False FileDate=06/28/2025
+        UpdateCommission=True UpdateContactByType=True/>
+    <RevportBody DataType=Account>
+=<Account AccountType=Client Account BusinessUnit=PIANDCHAR(10)AND
+    BusinessWorkGroup=AMRSPI ClientAccountId=ANDB8ANDANDCHAR(10)AND
+    ClientFirmId=Template - AMRSPI ISOCurrency=USDANDCHAR(10)AND
+    InceptionDate=ANDTEXT(C8,MM/DD/YYYY)ANDAND EndDate=ANDTEXT(H8,MM/DD/YYYY)ANDANDCHAR(10)AND
+    Name=ANDE8ANDANDCHAR(10)AND
+    ShortName=ANDF8AND StartDate=ANDTEXT(D8,MM/DD/YYYY)AND PortfolioBillingRecord=ANDG8AND>ANDCHAR(10)AND
+</Account>
+=</RevportBody>ANDCHAR(10)AND
+<RevportTrailer DataType=Account RecordCount=ANDJ9AND/>ANDCHAR(10)AND
+</Bonaire>
+
+--------------------------------------------------------------------------------------------------------------------------------
+# Formula for Generating Loader to put Account Back on Previous Template w/ blanked out EndDate
 =<?xml version=1.0 encoding=UTF-8?>ANDCHAR(10)AND
 <Bonaire>ANDCHAR(10)AND
     <RevportHeader CheckMInRequiredForUpdate=FalseANDCHAR(10)AND
-        DeleteContactByOmission=False FileDate=ANDIF(MONTH(TODAY())<10,0ANDMONTH(TODAY()),MONTH(TODAY()))AND/ANDDAY(TODAY())AND/ANDYEAR(TODAY())ANDANDCHAR(10)ANDL607
+        DeleteContactByOmission=False FileDate=ANDIF(MONTH(TODAY())<10,0ANDMONTH(TODAY()),MONTH(TODAY()))AND/ANDDAY(TODAY())AND/ANDYEAR(TODAY())ANDANDCHAR(10)AND
         UpdateCommission=True UpdateContactByType=True/>ANDCHAR(10)AND
     <RevportBody DataType=Account>
+=<Account AccountType=Client Account BusinessUnit=PIANDCHAR(10)AND
+    BusinessWorkGroup=AMRSPI ClientAccountId=ANDB8ANDANDCHAR(10)AND
+    ClientFirmId=Template - AMRSPI ISOCurrency=USDANDCHAR(10)AND
+    InceptionDate=ANDTEXT(C8,MM/DD/YYYY)ANDAND EndDate=ANDCHAR(10)AND
+    Name=ANDE8ANDANDCHAR(10)AND
+    ShortName=ANDF8AND StartDate=ANDTEXT(D8,MM/DD/YYYY)AND PortfolioBillingRecord=ANDG8AND>ANDCHAR(10)AND
+</Account>
 =</RevportBody>ANDCHAR(10)AND
-<RevportTrailer DataType=Account RecordCount=ANDJ608AND/>ANDCHAR(10)AND
+<RevportTrailer DataType=Account RecordCount=ANDJ9
+AND/>ANDCHAR(10)AND
 </Bonaire>
 
--------------------------------------------------
-<?xml version=1.0 encoding=UTF-8?>
-<Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate=06/24/2025
-        UpdateCommission=True UpdateContactByType=True/>
-    <RevportBody DataType=Account>
-<Account AccountType=Client Account BusinessUnit=PI
-    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxx
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate=05/31/2022
-    Name=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT
-    ShortName=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT StartDate=05/31/2022 PortfolioBillingRecord=AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR>
-</Account>
-</RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
-</Bonaire>
-
------------------------------------------------
-<?xml version=1.0 encoding=UTF-8?>
-<Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate=06/24/2025
-        UpdateCommission=True UpdateContactByType=True/>
-    <RevportBody DataType=Account>
-<Account AccountType=Client Account BusinessUnit=PI
-    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxx
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate=07/18/2011 EndDate=01/07/2025
-    Name=GERALD FERNANDEZ TTEE U/A DTD 09/03/1993 GERALD FERNANDEZ REV TRUST
-    ShortName=GERALD FERNANDEZ TTEE  StartDate=07/18/2011 PortfolioBillingRecord=AMRSPI/Template - EQ+FI+CA/Single Account/DD>
-</Account>
-</RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
-</Bonaire>
-
------------------------------------------------------
-<?xml version=1.0 encoding=UTF-8?>
-<Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
-        DeleteContactByOmission=False FileDate=06/24/2025
-        UpdateCommission=True UpdateContactByType=True/>
-    <RevportBody DataType=Account>
-<Account AccountType=Client Account BusinessUnit=PI
-    BusinessWorkGroup=AMRSPI ClientAccountId=xxxxxxxx
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT
-    Name=AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR
-    ShortName=45818 StartDate=ARTICLE NINE TRUST FBO AMY SAGNER POULIOT PortfolioBillingRecord=>
-</Account>
-</RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
-</Bonaire>
-
-
-    
-
-
-    
 
 
 
