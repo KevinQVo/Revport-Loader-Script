@@ -18,7 +18,7 @@
 </Bonaire>
 
 --------------------------------------------------------------------------------------------------------------------------------
-#Formula for Generating Loader to put Account on Non-Managed Hold
+#Formula for Generating Loader to put Account Back on Previous Template
 =<?xml version=1.0 encoding=UTF-8?>ANDCHAR(10)AND
 <Bonaire>ANDCHAR(10)AND
     <RevportHeader CheckMInRequiredForUpdate=FalseANDCHAR(10)AND
