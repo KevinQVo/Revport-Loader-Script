@@ -1,6 +1,6 @@
 import streamlit as st
 from options import options
-from templates import *
+from templates import account_template
 
 st.set_page_config(page_title="Revport XML Loader Generator")
 st.title("Revport XML Loader Generator")
