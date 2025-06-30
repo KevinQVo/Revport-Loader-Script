@@ -33,7 +33,7 @@ def non_managed_hold(account_id, name, start_date):
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission="False" FileDate={_file_date()}
-        UpdateCommission=True UpdateContactByType=True/>
+        UpdateCommission="True" UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
@@ -51,7 +51,7 @@ def previous_template(account_id, name, start_date, template):
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission="False" FileDate="{_file_date()}"
-        UpdateCommission=True UpdateContactByType=True/>
+        UpdateCommission="True" UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
@@ -69,7 +69,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=""False""
         DeleteContactByOmission="False" FileDate="{_file_date()}"
-        UpdateCommission=True UpdateContactByType=True/>
+        UpdateCommission="True" UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
@@ -87,7 +87,7 @@ def previous_template_blank_end(account_id, name, start_date, template):
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission="False" FileDate="{_file_date()}"
-        UpdateCommission=True UpdateContactByType=True/>
+        UpdateCommission="True" UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PIS
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
