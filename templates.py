@@ -31,7 +31,7 @@ def _file_date():
 def non_managed_hold(account_id, name, start_date):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
+    <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
@@ -49,7 +49,7 @@ def non_managed_hold(account_id, name, start_date):
 def previous_template(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
+    <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
@@ -67,7 +67,7 @@ def previous_template(account_id, name, start_date, template):
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
+    <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
@@ -85,7 +85,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 def previous_template_blank_end(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=False
+    <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission=False FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
