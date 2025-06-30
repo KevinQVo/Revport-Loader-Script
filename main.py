@@ -19,6 +19,7 @@ if selection == "Put Account on Non-Managed Hold":
     account_id = st.text_input("Client Account Id")
     name = st.text_input("Account Name")
     start_date = st.date_input("Start Date")
+     template = st.selectbox("Choose Template", account_template)
 
     if st.button("Generate XML"):
         xml = non_managed_hold(account_id, name, start_date.strftime("%m/%d/%Y"))
