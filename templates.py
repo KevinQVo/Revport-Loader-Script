@@ -31,8 +31,8 @@ def _file_date():
 def non_managed_hold(account_id, name, start_date):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=""False""
-        DeleteContactByOmission=""False"" FileDate={_file_date()}
+    <RevportHeader CheckMInRequiredForUpdate="False"
+        DeleteContactByOmission="False" FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -49,8 +49,8 @@ def non_managed_hold(account_id, name, start_date):
 def previous_template(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=""False""
-        DeleteContactByOmission=""False"" FileDate={_file_date()}
+    <RevportHeader CheckMInRequiredForUpdate="False"
+        DeleteContactByOmission="False" FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -68,7 +68,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=""False""
-        DeleteContactByOmission=""False"" FileDate={_file_date()}
+        DeleteContactByOmission="False" FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
@@ -85,8 +85,8 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 def previous_template_blank_end(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=""False""
-        DeleteContactByOmission=""False"" FileDate={_file_date()}
+    <RevportHeader CheckMInRequiredForUpdate="False"
+        DeleteContactByOmission="False" FileDate={_file_date()}
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PIS
