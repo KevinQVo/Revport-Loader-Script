@@ -50,7 +50,7 @@ def previous_template(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
-        DeleteContactByOmission="False" FileDate={_file_date()}
+        DeleteContactByOmission="False" FileDate=f""{_file_date()}""
         UpdateCommission=True UpdateContactByType=True/>
     <RevportBody DataType=Account>
 <Account AccountType=Client Account BusinessUnit=PI
