@@ -38,8 +38,8 @@ def non_managed_hold(account_id, name, start_date):
 <Account AccountType="Client Account" BusinessUnit="PI"
     BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
     ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate={start_date}
-    Name={name}
+    InceptionDate="{start_date}"
+    Name="{name}"
     ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
 </Account>
 </RevportBody>
