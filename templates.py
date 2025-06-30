@@ -32,10 +32,10 @@ def non_managed_hold(account_id, name, start_date):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
-        DeleteContactByOmission="False" FileDate={_file_date()}
+        DeleteContactByOmission="False" FileDate="{_file_date()}"
         UpdateCommission="True" UpdateContactByType="True"/>
-    <RevportBody DataType=Account>
-<Account AccountType=Client Account BusinessUnit=PI
+    <RevportBody DataType="Account">
+<Account AccountType="Client Account" BusinessUnit="PI"
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
@@ -53,7 +53,7 @@ def previous_template(account_id, name, start_date, template):
         DeleteContactByOmission="False" FileDate="{_file_date()}"
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
-<Account AccountType=Client Account BusinessUnit=PI
+<Account AccountType="Client Account" BusinessUnit="PI"
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date}
@@ -71,7 +71,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
         DeleteContactByOmission="False" FileDate="{_file_date()}"
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
-<Account AccountType=Client Account BusinessUnit=PI
+<Account AccountType="Client Account" BusinessUnit="PI"
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date} EndDate={end_date}
@@ -89,7 +89,7 @@ def previous_template_blank_end(account_id, name, start_date, template):
         DeleteContactByOmission="False" FileDate="{_file_date()}"
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
-<Account AccountType=Client Account BusinessUnit=PIS
+<Account AccountType="Client Account" BusinessUnit="PIS"
     BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
     ClientFirmId=Template - AMRSPI ISOCurrency=USD
     InceptionDate={start_date} EndDate=
