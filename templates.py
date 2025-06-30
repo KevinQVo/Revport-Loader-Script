@@ -36,14 +36,14 @@ def non_managed_hold(account_id, name, start_date):
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
 <Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
+    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
+    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
     InceptionDate={start_date}
     Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord=AMRSPI/Template - Managed Hold Accounts>
+    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
 </Account>
 </RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
+<RevportTrailer DataType="Account" RecordCount="1"/>
 </Bonaire>"""
 
 def previous_template(account_id, name, start_date, template):
@@ -54,14 +54,14 @@ def previous_template(account_id, name, start_date, template):
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
 <Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate={start_date}
-    Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
+    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
+    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
+    InceptionDate="{start_date}"
+    Name="{name}"
+    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
 </Account>
 </RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
+<RevportTrailer DataType="Account" RecordCount="1"/>
 </Bonaire>"""
 
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
@@ -72,14 +72,14 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
 <Account AccountType="Client Account" BusinessUnit="PI"
-    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate={start_date} EndDate={end_date}
-    Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
+    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
+    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
+    InceptionDate="{start_date}" EndDate={end_date}
+    Name="{name}"
+    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}'>
 </Account>
 </RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
+<RevportTrailer DataType="Account" RecordCount="1"/>
 </Bonaire>"""
 
 def previous_template_blank_end(account_id, name, start_date, template):
@@ -90,13 +90,13 @@ def previous_template_blank_end(account_id, name, start_date, template):
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
 <Account AccountType="Client Account" BusinessUnit="PIS"
-    BusinessWorkGroup=AMRSPI ClientAccountId={account_id}
-    ClientFirmId=Template - AMRSPI ISOCurrency=USD
-    InceptionDate={start_date} EndDate=
-    Name={name}
-    ShortName={name} StartDate={start_date} PortfolioBillingRecord={template}>
+    BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
+    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
+    InceptionDate="{start_date}" EndDate=
+    Name="{name}"
+    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
 </Account>
 </RevportBody>
-<RevportTrailer DataType=Account RecordCount=1/>
+<RevportTrailer DataType="Account" RecordCount="1"/>
 </Bonaire>"""
 
