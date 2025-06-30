@@ -22,7 +22,7 @@ if selection == "Put Account on Non-Managed Hold":
     template = st.selectbox("Choose Template", account_template)
 
     if st.button("Generate XML"):
-        xml = non_managed_hold(account_id, name, start_date.strftime("%m/%d/%Y"))
+        xml = non_managed_hold(account_id, name, start_date.strftime("%m/%d/%Y"), template)
         st.code(xml, language=None)
 
         st.download_button(
