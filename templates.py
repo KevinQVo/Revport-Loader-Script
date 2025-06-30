@@ -28,7 +28,7 @@ account_template = [
 def _file_date():
     return date.today().strftime("%m/%d/%Y")
 
-def non_managed_hold(account_id, name, start_date):
+def non_managed_hold(account_id, name, start_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate="False"
