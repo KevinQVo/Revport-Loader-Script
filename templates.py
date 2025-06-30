@@ -29,7 +29,7 @@ def _file_date():
     return date.today().strftime("%m/%d/%Y")
 
 def non_managed_hold(account_id, name, start_date):
-    return f"""<?xml version=1.0 encoding=UTF-8?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
         DeleteContactByOmission=False FileDate={_file_date()}
@@ -47,7 +47,7 @@ def non_managed_hold(account_id, name, start_date):
 </Bonaire>"""
 
 def previous_template(account_id, name, start_date, template):
-    return f"""<?xml version=1.0 encoding=UTF-8?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
         DeleteContactByOmission=False FileDate={_file_date()}
@@ -65,7 +65,7 @@ def previous_template(account_id, name, start_date, template):
 </Bonaire>"""
 
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
-    return f"""<?xml version=1.0 encoding=UTF-8?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
         DeleteContactByOmission=False FileDate={_file_date()}
@@ -83,7 +83,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 </Bonaire>"""
 
 def previous_template_blank_end(account_id, name, start_date, template):
-    return f"""<?xml version=1.0 encoding=UTF-8?>
+    return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
     <RevportHeader CheckMInRequiredForUpdate=False
         DeleteContactByOmission=False FileDate={_file_date()}
