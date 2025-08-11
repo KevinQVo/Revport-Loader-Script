@@ -77,7 +77,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
     ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
     InceptionDate="{start_date}" EndDate="{end_date}"
     Name="{name}"
-    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}'>
+    ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}">
 </Account>
 </RevportBody>
 <RevportTrailer DataType="Account" RecordCount="1"/>
