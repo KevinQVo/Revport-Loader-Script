@@ -12,6 +12,7 @@ account_template = [
     "AMRSPI/Template - EQ+FI+CA/Family Account/NotDD/Arrears",
     "AMRSPI/Template - EQ+FI+CA/Single Account/DD",
     "AMRSPI/Template - EQ+FI+CA/Single Account/DD/Arrears",
+    "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/Arrears",
     "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD",
     "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR",
     "AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR-LADDERED",
