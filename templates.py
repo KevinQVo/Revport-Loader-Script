@@ -75,7 +75,7 @@ def previous_template_with_enddate(account_id, name, start_date, end_date, templ
 <Account AccountType="Client Account" BusinessUnit="PI"
     BusinessWorkGroup="AMRSPI" ClientAccountId="{account_id}"
     ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
-    InceptionDate="{start_date}" EndDate={end_date}
+    InceptionDate="{start_date}" EndDate="{end_date}"
     Name="{name}"
     ShortName="{name}" StartDate="{start_date}" PortfolioBillingRecord="{template}'>
 </Account>
