@@ -68,7 +68,7 @@ def previous_template(account_id, name, start_date, template):
 def previous_template_with_enddate(account_id, name, start_date, end_date, template):
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <Bonaire>
-    <RevportHeader CheckMInRequiredForUpdate=""False""
+    <RevportHeader CheckMInRequiredForUpdate="False"
         DeleteContactByOmission="False" FileDate="{_file_date()}"
         UpdateCommission="True" UpdateContactByType="True"/>
     <RevportBody DataType="Account">
