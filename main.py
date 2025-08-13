@@ -33,7 +33,7 @@ if selection == "Put Account on Non-Managed Hold":
         )
 
 # Logic for Account back on previous Template
-elif selection == "Put the Account back on Previous Template":
+elif selection == "Put the Account On a Template":
     account_id = st.text_input("Client Account Id")
     name = st.text_input("Account Name") 
     start_date = st.date_input("Start Date")
