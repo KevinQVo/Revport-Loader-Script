@@ -78,3 +78,22 @@ AND/>ANDCHAR(10)AND
 
 
 
+<?xml version="1.0" encoding="UTF-8"?>
+<Bonaire>
+    <RevportHeader CheckMInRequiredForUpdate="False"
+        DeleteContactByOmission="False" FileDate="08/22/2025"
+        UpdateCommission="True" UpdateContactByType="True"/>
+    <RevportBody DataType="Account">
+<Account AccountType="Client Account" BusinessUnit="PI"
+    BusinessWorkGroup="AMRSPI" ClientAccountId=""
+    ClientFirmId="Template - AMRSPI" ISOCurrency="USD"
+    InceptionDate="04/27/2023" EndDate="04/11/2025"
+    Name="T CALLAHAN TTEE MEG SIEGLER CALLAHAN QPRT REMAINDER TR DTD 09/30/2002"
+    ShortName="T CALLAHAN TTEE MEG SIEGLER CALLAHAN QPRT REMAINDER TR DTD 09/30/2002" StartDate="04/27/2023" PortfolioBillingRecord="AMRSPI/Template - EQ+FI+CA/Single Account/NotDD/BBR">
+</Account>
+</RevportBody>
+<RevportTrailer DataType="Account" RecordCount="1"/>
+</Bonaire>
+
+
+
